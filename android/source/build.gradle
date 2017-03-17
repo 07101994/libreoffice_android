@@ -194,16 +194,16 @@ task createStrippedConfigMain(type: Exec) {
     dependsOn 'createStrippedConfig'
     inputs.files "${liboInstdir}/share/registry/main.xcd", "${liboSrcRoot}/android/mobile-config.py"
     outputs.file "assets_strippedUI/share/registry/main.xcd"
-    executable "${liboSrcRoot}/android/mobile-config.py"
-    args = ["${liboInstdir}/share/registry/main.xcd", "assets_strippedUI/share/registry/main.xcd"]
+    executable "python"
+    args = ["${liboSrcRoot}/android/mobile-config.py", "${liboInstdir}/share/registry/main.xcd", "assets_strippedUI/share/registry/main.xcd"]
 }
 
 task createStrippedConfigRegistry(type: Exec) {
     dependsOn 'createStrippedConfig'
     inputs.files "${liboInstdir}/share/registry/res/registry_en-US.xcd", "${liboSrcRoot}/android/mobile-config.py"
     outputs.file "assets_strippedUI/share/registry/res/registry_en-US.xcd"
-    executable "${liboSrcRoot}/android/mobile-config.py"
-    args = ["${liboInstdir}/share/registry/res/registry_en-US.xcd", "assets_strippedUI/share/registry/res/registry_en-US.xcd"]
+    executable "python"
+    args = ["${liboSrcRoot}/android/mobile-config.py", "${liboInstdir}/share/registry/res/registry_en-US.xcd", "assets_strippedUI/share/registry/res/registry_en-US.xcd"]
     doFirst {
         file('assets_strippedUI/share/registry/res').mkdirs()
     }
