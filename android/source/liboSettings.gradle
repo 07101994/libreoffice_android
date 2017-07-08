@@ -11,12 +11,12 @@ ext {
     liboExampleDocument = '/home/shawn/git/libreoffice/android/default-document/example.odt'
     liboVersionMajor    = '5'
     liboVersionMinor    = '3'
-    liboGitFullCommit   = '05c89af876fc7bb2e02e7de84df0cfc2869b0071'
-    liboNdkGdbserver    = '/home/shawn/android/android-ndk-r10e/prebuilt/android-arm/gdbserver/gdbserver'
+    liboGitFullCommit   = '228a4ff4fe70ca5b7306b2c8312b9a1d3f618118'
+    liboNdkGdbserver    = '/home/shawn/android/android-ndk-r10e/prebuilt/android-x86/gdbserver/gdbserver'
     liboAndroidAppAbi   = 'armeabi-v7a'
 }
 android.defaultConfig {
     applicationId 'org.example.libreoffice'
     versionCode project.hasProperty('cmdVersionCode') ? cmdVersionCode.toInteger() : 1
-    versionName '5.3.0.0.alpha0+/05c89af/lxtest'
+    versionName '5.3.4.2.0+/228a4ff4/shawn'
 }
